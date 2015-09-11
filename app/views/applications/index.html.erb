@@ -3,7 +3,8 @@
 <div class='row'>
   <div class='col-md-12'>
     <% @applications.each do | application | %>
-      <h3><%= link_to application.url, application %></h3>
+      <h3><%= link_to application.name, application %></h3>
+      <h3><%= application.url %></h3>
     <% end %>
   </div>
 </div>

@@ -1,0 +1,25 @@
+<h2>Add a Site</h2>
+
+<%= form_for @application do |f| %>
+  <% if @application.errors.any? %>
+    <div class="alert alert-danger">
+      <h4>There are <%= pluralize(@topic.errors.count, "error") %>.</h4>
+      <ul>
+        <% @topic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+       </ul>
+    </div>
+  <% end %>
+  
+  <div class='form-group'>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control', placeholder: "Application Name" %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :url %>
+    <%= f.text_field :url, class: 'form-control', placeholder: "Application URL" %>
+  </div>
+    <%= f.submit "Save", class: 'btn btn-success' %>
+    
+<% end %>

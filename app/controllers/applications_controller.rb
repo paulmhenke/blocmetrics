@@ -27,6 +27,6 @@ class ApplicationsController < ApplicationController
   private
   
   def application_params
-    params.require(:application).permit(:url)
+    params.require(:application).permit(:url, :name)
   end
 end
