@@ -28,4 +28,5 @@ class ApplicationsController < ApplicationController
   
   def application_params
     params.require(:application).permit(:url)
+  end
 end
