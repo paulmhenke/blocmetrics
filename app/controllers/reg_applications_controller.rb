@@ -2,7 +2,6 @@ class RegApplicationsController < ApplicationController
     
   def index
     @user = current_user
-    #@applications = RegApplication.all
     @applications = @user.reg_applications
   end
   
