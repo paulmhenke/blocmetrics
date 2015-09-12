@@ -23,6 +23,22 @@ class ApplicationsController < ApplicationController
     end
   end
   
+  def show 
+    @user = current_user
+    @application = Application.find(params[:id])
+  end
+  
+  def destroy
+    @application = Application.find(params[:id])
+    if @application.destroy
+      flash[:notice] = "This Site has been removed from monitoring"
+      redirect_to applications_path
+    else
+      flash[:error] = "There was an error. Please try again."
+      redirect_to [@application] #? is this right
+    end
+  end
+  
   
   private
   
