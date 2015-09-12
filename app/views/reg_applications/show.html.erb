@@ -5,6 +5,7 @@
     
       <h3><%= @application.name %></h3>
       <h3><%= @application.url %></h3>
+      <h3><%= @events.count %> events tracked</h3>
       
       <%= link_to "Remove Monitoring for this Site", [@application], data: {confirm: "This action cannot be undone. Are you sure?" }, method: :delete, class: 'btn btn-danger' %>
     

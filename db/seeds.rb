@@ -16,6 +16,11 @@ RegApplication.create!(name: "ESPN", url: "espn.com", user_id: member.id)
 RegApplication.create!(name: "SI", url: "si.com", user_id: member.id)
 RegApplication.create!(name: "CNN", url: "cnn.com", user_id: member_two.id)
 RegApplication.create!(name: "Bloc", url: "bloc.io", user_id: member_three.id)
+apps = RegApplication.all
+
+100.times do
+    Event.create!(name: Faker::Lorem.sentence, reg_application: apps.sample)
+end
 
 puts "Seed finished"
-puts "#{User.count} users, #{RegApplication.count} apps."
+puts "#{User.count} users, #{RegApplication.count} apps, #{Event.count} events created."

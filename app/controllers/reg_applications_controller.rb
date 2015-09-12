@@ -26,6 +26,7 @@ class RegApplicationsController < ApplicationController
   def show 
     @user = current_user
     @application = RegApplication.find(params[:id])
+    @events = @application.events.group_by(&:name)
   end
   
   def destroy
