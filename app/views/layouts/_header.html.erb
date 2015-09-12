@@ -7,13 +7,13 @@
       <ul class="nav navbar-nav navbar-right">
         
         <% if current_user %>
-          <li><%= link_to "My Sites", applications_path %></li>
+          <li><%= link_to "My Sites", reg_applications_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Add a Site", new_application_path %></li>
+              <li><%= link_to "Add a Site", new_reg_application_path %></li>
               <li><%= link_to "Change Password", edit_user_registration_path %></li>
               <li class="divider"></li>
               <li>

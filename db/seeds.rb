@@ -12,10 +12,10 @@ member_three = User.new(email: "paulmhenke+2@gmail.com", password: "helloworld")
 member_three.skip_confirmation!
 member_three.save!
 
-Application.create!(name: "ESPN", url: "espn.com", user_id: member.id)
-Application.create!(name: "SI", url: "si.com", user_id: member.id)
-Application.create!(name: "CNN", url: "cnn.com", user_id: member_two.id)
-Application.create!(name: "Bloc", url: "bloc.io", user_id: member_three.id)
+RegApplication.create!(name: "ESPN", url: "espn.com", user_id: member.id)
+RegApplication.create!(name: "SI", url: "si.com", user_id: member.id)
+RegApplication.create!(name: "CNN", url: "cnn.com", user_id: member_two.id)
+RegApplication.create!(name: "Bloc", url: "bloc.io", user_id: member_three.id)
 
 puts "Seed finished"
-puts "#{User.count} users, #{Application.count} apps."
+puts "#{User.count} users, #{RegApplication.count} apps."
