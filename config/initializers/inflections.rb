@@ -1,3 +1,7 @@
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+  inflect.acronym 'API' #? this is pretty crazy....done much besides api specifically?
+end
+ 
 # Be sure to restart your server when you modify this file.
 
 # Add new inflection rules using the following format. Inflections
