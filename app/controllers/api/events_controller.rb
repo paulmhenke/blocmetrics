@@ -1,8 +1,13 @@
 class API::EventsController < ApplicationController
   
-  skip_before_action :verify_authenticity_token
+  # curl request that works on Cloud 9
+  #curl -v -H "Accept: application/json" -H "Origin: espn.com" -H "Content-Type: application/json" -X POST -d '{"name":"foobar"}'  $IP:$PORT/api/events
   
   before_filter :set_access_control_headers
+  
+  skip_before_action :verify_authenticity_token
+  
+  
   
   def set_access_control_headers
     headers['Access-Control-Allow-Origin'] = '*'
